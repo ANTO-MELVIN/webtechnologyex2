@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home Repair Services</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('https://img.theweek.in/content/dam/week/week/news/india/images/2024/10/27/vijay-tvk-party-conference-pti.jpg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #f5e026;
+      color: rgb(253, 3, 3);
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 30px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .success-message {
+      color: green;
+      font-weight: bold;
+      display: none;
+      margin-top: 20px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+    
+  <header>
+    <h1>TVK Home Repair Services</h1>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#request">Request Service</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li>🔧 Plumbing</li>
+        <li>💡 Electrical</li>
+        <li>🪚 Carpentry</li>
+        <li>🎨 Painting</li>
+        <li>🔌 Appliance Repair</li>
+      </ul>
+    </section>
+
+    <section id="request">
+      <h2>Request a Service</h2>
+      <form id="repairForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" required>
+
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+
+        <label for="address">Address</label>
+        <textarea id="address" required></textarea>
+
+        <label for="service">Service Type</label>
+        <select id="service" required>
+          <option value="">-- Select a Service --</option>
+          <option>Plumbing</option>
+          <option>Electrical</option>
+          <option>Carpentry</option>
+          <option>Painting</option>
+          <option>Appliance Repair</option>
+        </select>
+
+        <label for="date">Preferred Date</label>
+        <input type="date" id="date" required>
+
+        <label for="description">Description (optional)</label>
+        <textarea id="description"></textarea>
+
+        <button type="submit">Submit Request</button>
+      </form>
+
+      <div class="success-message" id="successMessage">
+        ✅ Your request has been submitted successfully!
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('repairForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      document.getElementById('successMessage').style.display = 'block';
+
+      document.getElementById('repairForm').reset();
+    });
+  </script>
+
+</body>
+</html>
